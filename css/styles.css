@@ -1,0 +1,85 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --slate300: hsl(212, 45%, 89%);
+  --slate500: hsl(216, 15%, 48%);
+  --slate900: hsl(218, 44%, 22%);
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.5rem;
+  background-color: var(--slate300);
+}
+
+.qr-code {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 320px;
+  border-radius: 20px;
+  box-shadow: 0 25px 25px 0 rgba(0, 0, 0, 0.05);
+  padding: 1.06em 1.06em 2.6em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white);
+  text-align: center;
+}
+
+.qr-code__img {
+  border-radius: 10px;
+  margin-bottom: 1.6em;
+}
+
+.qr-code__title {
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 1.2;
+  color: var(--slate900);
+  margin-bottom: 0.72em;
+}
+
+.qr-code__text {
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  color: var(--slate500);
+  max-width: 256px;
+}
